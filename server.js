@@ -3,6 +3,8 @@ const app = express();
 
 app.use(express.static('client/public'));
 
+app.use(require('./controllers/index.js'));
+
 app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
